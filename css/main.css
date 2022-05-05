@@ -31,3 +31,8 @@ body{
     position: absolute;
     bottom: 10px;
 }
+
+footer{
+background-color:RGB(210,210,210);
+border-radius:2px;
+}

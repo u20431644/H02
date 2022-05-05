@@ -57,4 +57,5 @@ window.addEventListener("load",function(){
         
         document.getElementById("Cinema"+index+"img").innerHTML=movies[index]['poster_url'] ; //concat the image string tp display the image
     }
+
 });
