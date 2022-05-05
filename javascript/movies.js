@@ -55,6 +55,6 @@ window.addEventListener("load",function(){
         document.getElementById("Cinema"+index+"title").innerHTML=movies[index]['title']; //concat the string to dynamically insert the content
         document.getElementById("Cinema"+index+"d").innerHTML=movies[index]['description']; //concat the string to dynamically insert the content
         
-        document.getElementById("Cinema"+index+"img").innerHTML=movies[index]['poster_url'] ; //concat the image string tp display the image
+        // document.getElementById("Cinema"+index+"img").innerHTML=movies[index]['poster_url'] ; //concat the image string tp display the image
     }
 });

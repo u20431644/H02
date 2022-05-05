@@ -28,6 +28,12 @@ body{
 }
 
 .btn_bottom{
-    position: absolute;
-    bottom: 10px;
+    justify-content: center;
+    /* bottom: 10px; */
+}
+
+footer{
+    /* align-content: center; */
+    background-color: rgb(220, 220, 220);
+    min-height: 100px;
 }
