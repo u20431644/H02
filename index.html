@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/x-icon" href="/images/film.svg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html"><i class="fa fa-film"></i>Movies</a>
+        <div class="collapse navbar-collapse" id="collapseNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="navitem active"><a class="nav-link" href="contact.html">Contact us</a></li>     
+            </ul>  
+        </div>
+        <a class="navbar-brand ml-auto" href="cart.html"><i class="fa fa-cart-plus"></i>Cart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+
+<body>
+    <div class="Heading_centre">
+        <h1>Movies now showing:</h1> 
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card mx-auto" style="width: 22rem;">
+                <h5 id="Cinema0head" class="card-title">Cinema title</h5>
+                <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg" alt="Jurassic Park" >
+                <div class="card-body">
+                  <h5 id ="Cinema0title" class="card-title">Card title</h5>
+                  <p id="Cinema0d" class="card-text"></p>
+                  <div class="btn_bottom">
+                    <a href="#" class="btn btn-primary fa fa-info"> Show Details</a>
+                    <a href="#" class="btn btn-primary fa fa-book"> Book</a>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mx-auto" style="width: 22rem;">
+                <h5 id="Cinema1head" class="card-title">Cinema title</h5>
+                <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg/">
+                <div class="card-body">
+                  <h5 id ="Cinema1title" class="card-title">Card title</h5>
+                  <p id="Cinema1d" class="card-text"></p>
+                  <div class="btn_bottom">
+                    <a href="#" class="btn btn-primary fa fa-info"> Show Details</a>
+                    <a href="#" class="btn btn-primary fa fa-book"> Book</a>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mx-auto" style="width: 22rem;"> <!--apply mx auto to centre horizontally  -->
+                <h5 id="Cinema2head" class="card-title">Cinema title</h5>
+                <img class="card-img-top img-responsive" src="https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg">
+                <div class="card-body">
+                  <h5 id ="Cinema2title" class="card-title">Card title</h5>
+                  <p id="Cinema2d" class="card-text"></p>
+                  <div class="btn_bottom">
+                    <a href="#" class="btn btn-primary fa fa-info"> Show Details</a>
+                    <a href="#" class="btn btn-primary fa fa-book"> Book</a>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mx-auto" style="width: 22rem;">
+                <h5 id="Cinema3head" class="card-title">Cinema title</h5>
+                <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 id ="Cinema3title" class="card-title">Card title</h5>
+                  <p id="Cinema3d" class="card-text"></p>
+                    <div class="btn_bottom">
+                        <a href="#" class="btn btn-primary fa fa-info"> Show Details</a>
+                        <a href="#" class="btn btn-primary fa fa-book"> Book</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/bootstrap.js"></script>
+    <script src="javascript/movies.js"></script>
+</body>
+</html>
