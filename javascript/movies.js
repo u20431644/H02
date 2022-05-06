@@ -76,7 +76,7 @@ function btnbook(id){
     if (localStorage.clickcount) {
         localStorage.clickcount = Number(localStorage.clickcount)+1;
       } else {
-        localStorage.clickcount = 0;
+        localStorage.clickcount = 1;
       }
       document.getElementById("cartnumber").innerHTML = localStorage.clickcount;
     //persist the local data with a key/value
