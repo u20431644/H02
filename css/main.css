@@ -24,16 +24,39 @@ body{
 }
 
 .card{
-    min-height: 665px;
+    min-height: 695px;
 }
 
-.btn_bottom{
-    justify-content: center;
-    /* bottom: 10px; */
-}
-
-footer{
+.card-footer{
     /* align-content: center; */
-    background-color: rgb(220, 220, 220);
-    min-height: 100px;
+    background-color: rgb(212, 212, 212);
+    min-height: 50px;
+}
+
+span{
+    font-weight: normal;
+}
+
+.btndet{
+    background-color: rgb(231, 231, 231);
+    color: blue;
+}
+
+.btnbook{
+    background-color: rgb(31, 104, 29);
+    color: rgb(255, 255, 255);
+}
+
+.price{
+    font-weight: bold;
+    text-align: right;
+    vertical-align: text-bottom;
+    font-size: 18px;
+
+}
+
+.bottom{
+    position: absolute;
+    bottom:60px;
+    right: 10px;
 }
