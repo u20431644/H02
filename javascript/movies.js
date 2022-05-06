@@ -1,3 +1,5 @@
+cartnum=1;
+
 let movies = [
     {
         id: 0, //a unique identifier for this movie
@@ -56,14 +58,19 @@ window.addEventListener("load",function(){
         document.getElementById("Cinema"+index+"d").innerHTML=movies[index]['description']; //concat the string to dynamically insert the content
         document.getElementById("cinema"+index+"img").src=movies[index]['poster_url'] ; //concat the image string tp display the image
         document.getElementById("Cinema"+index+"p").innerHTML="Ticket Price: R"+(movies[index]['ticket_price']).toFixed(2) ; //concat the image string tp display the image
+        
     }
-
+    //document.getElementById("cartnumber").innerHTML="1"; test to add the items to the cart
 });
 
-function btnclick(id){
+function btnmodal(id){
     document.getElementById("modaltitle").innerHTML=movies[id]['title'];
     document.getElementById("mtitle").innerHTML=movies[id]['title'];
     document.getElementById("mdirector").innerHTML=movies[id]['director'];
     document.getElementById("mryear").innerHTML=movies[id]['release_year'];
     document.getElementById("mrun").innerHTML=movies[id]['runtime'];
+}
+
+function btnbook(id){
+    document.getElementById("cartnumber").innerHTML=cartnum++;
 }
