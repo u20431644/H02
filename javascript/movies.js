@@ -90,11 +90,16 @@ function btnbook(id){
       }
 
       if (localStorage.moviesInCart) {
-        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies[id]);
+        movies[id]['tickets_in_cart']+=1;
+        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies[id]); //reset the item instead of storing a new item each time
       } else {
+        movies[id]['tickets_in_cart']+=1;
         localStorage.moviesInCart =JSON.stringify(movies[id]);
       }
       document.getElementById("cartnumber").innerHTML = " "+localStorage.numberInCart; //display the number of items in the cart from local storage
     //persist the local data with a key/value
     //key = name of data to persist and value of what is stored under that name.
+    alert(movies[id]['tickets_in_cart']);
+    //also need to persist the number of tickets for each movie in the cart, how the objecct is persisted
+      //find out how to add multiple objects to local storage and update local storage
 }
