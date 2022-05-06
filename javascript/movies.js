@@ -1,4 +1,3 @@
-cartnum=1;
 
 let movies = [
     {
@@ -71,9 +70,15 @@ function btnmodal(id){
     document.getElementById("mrun").innerHTML=movies[id]['runtime'];
 }
 
-function btnbook(id){
-    document.getElementById("cartnumber").innerHTML=cartnum++;
+localStorage.setItem('cartnum',0);
 
+function btnbook(id){
+    if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+      } else {
+        localStorage.clickcount = 0;
+      }
+      document.getElementById("cartnumber").innerHTML = localStorage.clickcount;
     //persist the local data with a key/value
     //key = name of data to persist and value of what is stored under that name.
 }
