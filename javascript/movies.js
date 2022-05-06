@@ -73,4 +73,7 @@ function btnmodal(id){
 
 function btnbook(id){
     document.getElementById("cartnumber").innerHTML=cartnum++;
+
+    //persist the local data with a key/value
+    //key = name of data to persist and value of what is stored under that name.
 }
