@@ -70,15 +70,31 @@ function btnmodal(id){
     document.getElementById("mrun").innerHTML=movies[id]['runtime'];
 }
 
-localStorage.setItem('cartnum',0);
+// localStorage.setItem('moviesInCart'); //leave value undefined, otherwise it resets after every refresh
+// localStorage.setItem('totalCost'); //leave value undefined
+// localStorage.setItem('numberInCart'); //leave value undefined
 
 function btnbook(id){
-    if (localStorage.clickcount) {
-        localStorage.clickcount = Number(localStorage.clickcount)+1;
+    //increment the cart number
+      if (localStorage.numberInCart){
+        localStorage.setItem('numberInCart',Number(localStorage.numberInCart)+1)
       } else {
-        localStorage.clickcount = 1;
+          localStorage.numberInCart=1;
       }
-      document.getElementById("cartnumber").innerHTML = localStorage.clickcount;
+
+      //get the cost and store in the key
+      if (localStorage.totalCost) {
+        localStorage.setItem('totalCost',Number(localStorage.totalCost)+movies[id]['ticket_price']);
+      } else {
+        localStorage.totalCost = Number(movies[id]['ticket_price']);
+      }
+
+      if (localStorage.moviesInCart) {
+        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies[id]);
+      } else {
+        localStorage.moviesInCart =JSON.stringify(movies[id]);
+      }
+      document.getElementById("cartnumber").innerHTML = " "+localStorage.numberInCart; //display the number of items in the cart from local storage
     //persist the local data with a key/value
     //key = name of data to persist and value of what is stored under that name.
 }
