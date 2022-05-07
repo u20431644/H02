@@ -91,10 +91,10 @@ function btnbook(id){
 
       if (localStorage.moviesInCart) {
         movies[id]['tickets_in_cart']+=1;
-        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies[id]); //reset the item instead of storing a new item each time
+        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies); //reset the item instead of storing a new item each time
       } else {
         movies[id]['tickets_in_cart']+=1;
-        localStorage.moviesInCart =JSON.stringify(movies[id]);
+        localStorage.moviesInCart =JSON.stringify(movies);
       }
       document.getElementById("cartnumber").innerHTML = " "+localStorage.numberInCart; //display the number of items in the cart from local storage
     //persist the local data with a key/value
