@@ -56,9 +56,9 @@ window.addEventListener("load",function(){
         document.getElementById("Cinema"+index+"title").innerHTML=movies[index]['title']; //concat the string to dynamically insert the content
         document.getElementById("Cinema"+index+"d").innerHTML=movies[index]['description']; //concat the string to dynamically insert the content
         document.getElementById("cinema"+index+"img").src=movies[index]['poster_url'] ; //concat the image string tp display the image
-        document.getElementById("Cinema"+index+"p").innerHTML="Ticket Price: R"+(movies[index]['ticket_price']).toFixed(2) ; //concat the image string tp display the image
-        
+        document.getElementById("Cinema"+index+"p").innerHTML="Ticket Price: R"+(movies[index]['ticket_price']).toFixed(2) ; //concat the image string tp display the image        
     }
+    document.getElementById("cartnumber").innerHTML = " "+localStorage.numberInCart; //display the number of items in the cart from local storage
     //document.getElementById("cartnumber").innerHTML="1"; test to add the items to the cart
 });
 
@@ -70,9 +70,6 @@ function btnmodal(id){
     document.getElementById("mrun").innerHTML=movies[id]['runtime'];
 }
 
-// localStorage.setItem('moviesInCart'); //leave value undefined, otherwise it resets after every refresh
-// localStorage.setItem('totalCost'); //leave value undefined
-// localStorage.setItem('numberInCart'); //leave value undefined
 
 function btnbook(id){
     //increment the cart number
@@ -89,17 +86,23 @@ function btnbook(id){
         localStorage.totalCost = Number(movies[id]['ticket_price']);
       }
 
-      if (localStorage.moviesInCart) {
+      //check if localstorage is empty
+      if ((localStorage.getItem('moviesinCart'))===null){
         movies[id]['tickets_in_cart']+=1;
-        localStorage.moviesInCart = localStorage.moviesInCart+","+JSON.stringify(movies); //reset the item instead of storing a new item each time
-      } else {
-        movies[id]['tickets_in_cart']+=1;
-        localStorage.moviesInCart =JSON.stringify(movies);
+        localStorage.setItem('moviesinCart',JSON.stringify(movies));
+      } else{
+           // movies[id]['tickets_in_cart']+=1;
+            var retrievelocal = localStorage.getItem('moviesinCart');
+            var movies2 = JSON.parse(retrievelocal);
+            movies2[id]['tickets_in_cart']+=1;
+            localStorage.setItem('moviesinCart',JSON.stringify(movies2));
       }
+       
+        //check this logic as when coming back to the page it resets doesn't append
       document.getElementById("cartnumber").innerHTML = " "+localStorage.numberInCart; //display the number of items in the cart from local storage
     //persist the local data with a key/value
     //key = name of data to persist and value of what is stored under that name.
-    alert(movies[id]['tickets_in_cart']);
+    //alert(movies[id]['tickets_in_cart']); used to check the cart is updating
     //also need to persist the number of tickets for each movie in the cart, how the objecct is persisted
       //find out how to add multiple objects to local storage and update local storage
 }

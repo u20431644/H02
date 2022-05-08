@@ -60,3 +60,25 @@ span{
     bottom:60px;
     right: 10px;
 }
+
+tr:last-child{
+    font-weight: bolder;
+}
+tr:last-child td:nth-child(4){
+    color: red;
+}
+
+.fa-minus-square{
+ color: red;
+ border: 0px;
+ size: 15px;
+}
+
+.fa-arrow-circle-left{
+    color: rgb(0, 110, 255);
+    border: 0px;
+}
+.fa-arrow-circle-right{
+    color: rgb(0, 110, 255);
+    border: 0px;
+}
