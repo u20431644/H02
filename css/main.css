@@ -61,11 +61,14 @@ span{
     right: 10px;
 }
 
-tr:last-child{
-    font-weight: bolder;
-}
-tr:last-child td:nth-child(4){
+
+tfoot td:nth-child(4){
     color: red;
+    font-weight: bold;
+}
+
+tfoot{
+    font-weight: bold;
 }
 
 .fa-minus-square{
